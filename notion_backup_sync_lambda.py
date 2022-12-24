@@ -10,12 +10,12 @@ def lambda_handler(event, context):
     notion_api_version = os.environ.get("NOTION_VERSION") or "v1"
     notion_api_version_date = os.environ.get("NOTION_VERSION_DATE") or "2022-06-28"
     notion_api_database_id = os.environ.get("NOTION_DATABASE_ID") or "0590158c-cca7-43fe-b87f-e62a671abca0"
-    notion_api_secret_key = os.environ.get("NOTION_SECRET_KEY") or "secret_m3nIm4aOkqrEBnCp1iA5EBegp6cBbUHK3ZkGCj2dEHa"
+    notion_api_secret_key = os.environ.get("NOTION_SECRET_KEY") or ""
     
     service_name = os.environ.get("AWS_SERVICE_NAME") or "dynamodb"
     region_name = os.environ.get("AWS_REGION_NAME") or "us-east-1"
-    aws_access_key_id = os.environ.get("AWS_ACCESS_KEY_ID") or "AKIA54UO4IUZXVG2BONU"
-    aws_secret_access_key = os.environ.get("AWS_SECRET_ACCESS_KEY") or "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"
+    aws_access_key_id = os.environ.get("AWS_ACCESS_KEY_ID") or ""
+    aws_secret_access_key = os.environ.get("AWS_SECRET_ACCESS_KEY") or ""
     table_name = os.environ.get("AWS_DYNAMO_TABLE_NAME") or "notion_activities_devfazer"
 
     dynamo_client = boto3.resource(
