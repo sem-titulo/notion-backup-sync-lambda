@@ -63,7 +63,13 @@ def lambda_handler(event, context):
                 raise
         
         print(f"{len(registros)} Itens Inseridos com Sucesso!!")
-        return True
+        return {
+            'statusCode': 200,
+            'body': json.dumps(registros, default=str),
+            'headers': {
+                "Content-Type": "application/json"
+            }
+        }
 
         
 
@@ -75,3 +81,11 @@ def lambda_handler(event, context):
             RETORNO: {r.text}
     """
     print(log_error)
+    return {
+        'statusCode': 400,
+        'body': json.dumps(registros, default=str),
+        'headers': {
+            "Content-Type": "application/json"
+        }
+    }
+
