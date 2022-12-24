@@ -48,6 +48,7 @@ def lambda_handler(event, context):
 
     # Buscar Atividades no Notion
     r = requests.post(f"{URL}", data=json.dumps(payload), headers=headers)
+    registros = []
     if r.status_code == 200:
         registros = r.json().get("results") or []
         # Gravar ou Atualizar Registros
