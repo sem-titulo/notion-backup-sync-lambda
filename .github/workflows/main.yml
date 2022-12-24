@@ -23,4 +23,4 @@ jobs:
           function_name: notion-backup-sync-lambda
           source: notion_backup_sync_lambda.py
           #runtime: python3.9
-          #zip_file: deployment-package.zip
+          zip_file: deployment-package.zip
