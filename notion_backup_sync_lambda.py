@@ -26,8 +26,8 @@ def lambda_handler(event, context):
     dynamo_client = boto3.resource(
         service_name=f"{service_name}",
         region_name=f"{region_name}",
-        aws_access_key_id=f"{aws_access_key_id}",
-        aws_secret_access_key=f"{aws_secret_access_key}"
+        #aws_access_key_id=f"{aws_access_key_id}",
+        #aws_secret_access_key=f"{aws_secret_access_key}"
     )
 
     table = dynamo_client.Table(f'{table_name}')
