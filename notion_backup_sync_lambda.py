@@ -18,6 +18,11 @@ def lambda_handler(event, context):
     aws_secret_access_key = os.environ.get("AWS_SECRET_ACCESS_KEY") or "WhoffvI3kQ5usH5N9k0ypNFLuEeyFlvFKjMUjgM9"
     table_name = os.environ.get("AWS_DYNAMO_TABLE_NAME") or "notion_activities_devfazer"
 
+    print(service_name)
+    print(region_name)
+    print(aws_access_key_id)
+    print(aws_secret_access_key)
+
     dynamo_client = boto3.resource(
         service_name=f"{service_name}",
         region_name=f"{region_name}",
