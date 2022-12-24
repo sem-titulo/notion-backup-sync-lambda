@@ -50,6 +50,7 @@ def lambda_handler(event, context):
     r = requests.post(f"{URL}", data=json.dumps(payload), headers=headers)
     if r.status_code == 200:
         registros = r.json().get("results") or []
+        # Gravar ou Atualizar Registros
         for registro in registros:
             try:
                 print("GRAVANDO REGISTRO: " + registro.get("id"))
@@ -64,7 +65,7 @@ def lambda_handler(event, context):
         print(f"{len(registros)} Itens Inseridos com Sucesso!!")
         return True
 
-        # Gravar ou Atualizar Registros
+        
 
     log_error = f"""
             FALHA NA COMUNICAÇÃO COM API DO NOTION
