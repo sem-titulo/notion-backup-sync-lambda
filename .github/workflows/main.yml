@@ -20,5 +20,5 @@ jobs:
           aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws_region: ${{ secrets.AWS_REGION_NAME }}
-          function_name: lambda-cd
+          function_name: notion-backup-sync-lambda
           source: notion_backup_sync_lambda.py
